@@ -29,7 +29,7 @@ camera.resolution = (300, 300)
 camera.rotation = 270
 rawCapture = PiRGBArray(camera, size=(300, 300))
 
-net = cv2.dnn.readNet('./MobileNetSSD_deploy.xml', './MobileNetSSD_deploy.bin')
+net = cv2.dnn.readNet('./deploy.prototxt', './mobilenet_iter_73000.caffemodel')
 net.setPreferableTarget(cv2.dnn.DNN_TARGET_MYRIAD)
 
 try:
